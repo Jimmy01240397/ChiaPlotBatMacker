@@ -94,7 +94,7 @@ namespace Chia耕地腳本產生器
                     }
                 }
 
-                data += "start chia plots create -k " + Knum.Value + (finger.Text == "" ? "" : " -a " + finger.Text) + " -f " + fpk.Text + " -p " + ppk.Text + " -n " + plotnum.Value + " -d " + topath(finaldir.Text) + " -t " + thetemp1 + (thetemp2 == "" ? "" : " -2 " + thetemp2) + " -b " + ram.Value + " -r " + threadnum.Value + " -u " + bucketnum.Value + (checkBox2.Checked ? " " : " -x") + "\r\n";
+                data += "start chia plots create -k " + Knum.Value + (finger.Text == "" ? "" : " -a " + finger.Text) + " -f " + fpk.Text + " -c " + ppk.Text + " -n " + plotnum.Value + " -d " + topath(finaldir.Text) + " -t " + thetemp1 + (thetemp2 == "" ? "" : " -2 " + thetemp2) + " -b " + ram.Value + " -r " + threadnum.Value + " -u " + bucketnum.Value + (checkBox2.Checked ? " " : " -x") + "\r\n";
                 data += "timeout /t " + timedelay.Value + "\r\n)";
 
                 richTextBox1.Text = data;
@@ -229,6 +229,12 @@ namespace Chia耕地腳本產生器
                                     break;
                                 }
                             case "-p":
+                                {
+                                    i++;
+                                    //ppk.Text = alldata[i];
+                                    break;
+                                }
+                            case "-c":
                                 {
                                     i++;
                                     ppk.Text = alldata[i];

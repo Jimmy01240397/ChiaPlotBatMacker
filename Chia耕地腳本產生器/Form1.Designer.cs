@@ -188,9 +188,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(12, 115);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 12);
+            this.label10.Size = new System.Drawing.Size(103, 12);
             this.label10.TabIndex = 0;
-            this.label10.Text = "PoolPublicKey";
+            this.label10.Text = "PoolContractAddress";
             // 
             // ppk
             // 
